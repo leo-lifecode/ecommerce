@@ -1,15 +1,13 @@
-import React from "react";
-
 const Checkbox = () => {
   return (
-    <div className="flex text-xs justify-between items-center text-center ">
+    <div className="flex items-center justify-between text-center text-xs ">
       <div className="flex">
         <input type="checkbox" name="checkbox" id="checkbox" />
         <label htmlFor="checkbox" className="text-[11px] sm:text-sm">
           Remember me
         </label>
       </div>
-      <div className="font-bold text-[11px] sm:text-sm cursor-pointer">
+      <div className="cursor-pointer text-[11px] font-bold sm:text-sm">
         Forgot Password ?
       </div>
     </div>

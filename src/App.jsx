@@ -1,28 +1,25 @@
-import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Signup from "./pages/Signup";
 import Signin from "./pages/Signin";
-import Navbar from "./pages/Navbar";
 import Home from "./pages/home/Home";
-import Footer from "./pages/Footer";
-
+import LayoutHome from "./layout/LayoutHome";
+import CategoryPage from "./pages/CategoryPage/CategoryPage";
+import DetailProduct from "./pages/DetailProduct";
+import { ScrollNavigateToTop } from "./helper/NavigateToTop";
 const App = () => {
-  const [screenOpacity, SetScreenOpacity] = useState(false);
   return (
     <Router>
-      <div className="flex flex-col max-w-[1440px] m-auto overflow-hidden">
-      
-        <Navbar
-          screenOpacity={screenOpacity}
-          SetScreenOpacity={SetScreenOpacity}
-        />
+      <div className="m-auto flex max-w-[1440px] flex-col overflow-hidden">
+        <ScrollNavigateToTop />
         <Routes>
-          <Route path="/" element={<Home screenOpacity={screenOpacity} />} />
+          <Route path="/" element={<LayoutHome />}>
+            <Route index element={<Home />} />
+            <Route path="category" element={<CategoryPage />} />
+            <Route path="category/detail" element={<DetailProduct />} />
+          </Route>
           <Route path="Signup" element={<Signup />} />
           <Route path="Signin" element={<Signin />} />
         </Routes>
-        <Footer />
-        {/* </div> */}
       </div>
     </Router>
   );

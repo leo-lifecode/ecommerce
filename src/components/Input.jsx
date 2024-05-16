@@ -1,5 +1,3 @@
-import React from "react";
-
 const Input = ({ htmlFor, children, onchange, info, autoComplete }) => {
   let auto;
   if (autoComplete == "true") {
@@ -7,7 +5,7 @@ const Input = ({ htmlFor, children, onchange, info, autoComplete }) => {
   }
 
   return (
-    <div className="flex flex-col mb-3">
+    <div className="mb-3 flex flex-col">
       <label htmlFor={htmlFor}>{children}</label>
       <input
         style={{
@@ -19,7 +17,7 @@ const Input = ({ htmlFor, children, onchange, info, autoComplete }) => {
         id={htmlFor}
         autoComplete={auto}
         type={htmlFor}
-        className="border shadow-md p-2 w-full placeholder-gray-600 rounded-md text-sm focus:outline-green-400"
+        className="w-full rounded-md border p-2 text-sm placeholder-gray-600 shadow-md focus:outline-green-400"
       />
       {info === false && (
         <div className="text-[12px] text-red-500">

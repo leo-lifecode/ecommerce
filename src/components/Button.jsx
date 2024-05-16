@@ -1,4 +1,3 @@
-import React from "react";
 const Button = ({ bg = "bg-slate-700 rounded-lg", children = "submit" }) => {
   return (
     <button

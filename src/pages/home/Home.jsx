@@ -1,18 +1,16 @@
 import React from "react";
-import Homepage from "./Homepage";
-import CategoryShop from "./CategoryShop";
-import BrowseByDress from "./BrowseByDress";
-import ReviewCustomer from "./ReviewCustomer";
-import Subscribe from "./Subscribe";
+import Homepage from "./components/Homepage";
+import CategoryShop from "./components/CategoryShop";
+import BrowseByDress from "./components/BrowseByDress";
+import { useSelector } from "react-redux";
+const Home = () => {
+  const datascreen = useSelector((state) => state.screen.screen);
 
-const Home = ({ screenOpacity }) => {
   return (
-    <div className={`${screenOpacity ? "opacity-30" : null}`}>
+    <div className={`${datascreen ? "opacity-30" : null}`}>
       <Homepage />
       <CategoryShop />
       <BrowseByDress />
-      <ReviewCustomer />
-      <Subscribe />
     </div>
   );
 };
