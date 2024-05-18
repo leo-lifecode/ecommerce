@@ -16,26 +16,26 @@ import product16 from "../assets/images/product16.png";
 import product17 from "../assets/images/product17.png";
 
 const DataShop = {
-  Casual: [
+  CASUAL: [
     {
       id: 1,
       name: "baju bla-bla",
       img: product9,
-      price: 124,
+      price: 12,
       description: "hello world",
     },
     {
       id: 2,
       name: "baju bla-bla",
       img: product10,
-      price: 124,
+      price: 12,
       description: "hello world",
     },
     {
       id: 3,
       name: "baju bla-bla",
       img: product11,
-      price: 124,
+      price: 1,
       description: "hello world",
     },
     {
@@ -49,7 +49,7 @@ const DataShop = {
       id: 5,
       name: "baju bla-bla",
       img: product13,
-      price: 124,
+      price: 1245,
       description: "hello world",
     },
     {
@@ -81,42 +81,42 @@ const DataShop = {
       description: "hello world",
     },
   ],
-  pakaian: [
+  PAKAIAN: [
     {
       id: 1,
       name: "baju bla-bla",
       img: product1,
-      price: 124,
+      price: 12,
       description: "hello world",
     },
     {
       id: 2,
       name: "baju bla-bla",
       img: product2,
-      price: 124,
+      price: 23,
       description: "hello world",
     },
     {
       id: 3,
       name: "baju bla-bla",
       img: product3,
-      price: 124,
+      price: 34,
       description: "hello world",
     },
     {
       id: 4,
       name: "baju bla-bla",
       img: product8,
-      price: 124,
+      price: 45,
       description: "hello world",
     },
   ],
-  celana: [
+  CELANA: [
     {
       id: 6,
       name: "baju bla-bla",
       img: product5,
-      price: 124,
+      price: 12,
       description: "hello world",
     },
     {
@@ -130,11 +130,11 @@ const DataShop = {
       id: 8,
       name: "baju bla-bla",
       img: product7,
-      price: 124,
+      price: 14,
       description: "hello world",
     },
   ],
-  sarung: [
+  SARUNG: [
     {
       id: 9,
       name: "baju bla-bla",

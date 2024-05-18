@@ -6,7 +6,7 @@ import {
 import { useEffect, useRef, useState } from "react";
 import { IconChecklist } from "../../../components/Icon";
 
-const Filterbrowsebydress = ({ name, isSelected, activecheck }) => {
+const Filterbrowsebydress = ({ name, activecheck }) => {
   const dispatch = useDispatch();
   const [status, setStatus] = useState("#253B80");
 

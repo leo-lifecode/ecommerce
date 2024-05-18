@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Input from "./Input";
 import Checkbox from "./Checkbox";
 import Button from "./Button";
@@ -42,7 +42,7 @@ const Form = ({ type }) => {
   const formsignin = (
     <form onSubmit={handleLogin} className="w-3/5">
       {!infoErr && (
-        <div className="text-center text-red-600 text-[15px] mb-4">
+        <div className="mb-4 text-center text-[15px] text-red-600">
           username dan password anda salah
         </div>
       )}
@@ -57,7 +57,7 @@ const Form = ({ type }) => {
       >
         Password
       </Input>
-      <div className="mt-[-8px] mb-4">
+      <div className="mb-4 mt-[-8px]">
         <Checkbox />
       </div>
       <Button>Login</Button>
@@ -85,7 +85,7 @@ const Form = ({ type }) => {
       >
         Password
       </Input>
-      <div className="mt-[-8px] mb-4">
+      <div className="mb-4 mt-[-8px]">
         <Checkbox />
       </div>
       <Button>Daftar</Button>

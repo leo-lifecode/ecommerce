@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Signup from "./pages/Signup";
-import Signin from "./pages/Signin";
+import Signup from "./pages/Signup/Signup";
+import Signin from "./pages/Signin/Signin";
 import Home from "./pages/home/Home";
 import LayoutHome from "./layout/LayoutHome";
 import CategoryPage from "./pages/CategoryPage/CategoryPage";
-import DetailProduct from "./pages/DetailProduct";
+import DetailProduct from "./pages/Detailproduct/DetailProduct";
 import { ScrollNavigateToTop } from "./helper/NavigateToTop";
 const App = () => {
   return (

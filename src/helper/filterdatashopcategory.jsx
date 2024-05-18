@@ -1,16 +1,34 @@
 import DataShop from "../data/DataShop";
 
-export const filterdatashopcategory = (state, operator) => {
+export const filterdatashopcategory = (data, operator, sort) => {
+  const sortData = (array, sortType) => {
+    const sortedArray = [...array];
+    if (sortType === "Harga Tertinggi") {
+      return sortedArray.sort((a, b) => b.price - a.price);
+    } else if (sortType === "Harga Terendah") {
+      return sortedArray.sort((a, b) => a.price - b.price);
+    }
+    return sortedArray;
+  };
+
   switch (operator) {
     case "PAKAIAN":
-      return DataShop.pakaian;
-    case "KASUAL":
-      return DataShop.Casual;
+      return sort === "Relevansi"
+        ? DataShop.PAKAIAN
+        : sortData(DataShop.PAKAIAN, sort);
+    case "CASUAL":
+      return sort === "Relevansi"
+        ? DataShop.CASUAL
+        : sortData(DataShop.CASUAL, sort);
     case "CELANA":
-      return DataShop.celana;
+      return sort === "Relevansi"
+        ? DataShop.CELANA
+        : sortData(DataShop.CELANA, sort);
     case "SARUNG":
-      return DataShop.sarung;
+      return sort === "Relevansi"
+        ? DataShop.SARUNG
+        : sortData(DataShop.SARUNG, sort);
     default:
-      return DataShop.Casual;
+      DataShop.CASUAL;
   }
 };
