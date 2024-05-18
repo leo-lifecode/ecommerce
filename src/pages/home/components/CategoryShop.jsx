@@ -3,8 +3,8 @@ import ListProduct from "./ListProduct";
 const CategoryShop = () => {
   return (
     <>
-      <ListProduct DataShop={DataShop.pakaian}>PAKAIAN</ListProduct>
-      <ListProduct DataShop={DataShop.celana}>CELANA</ListProduct>
+      <ListProduct DataShop={DataShop.PAKAIAN}>PAKAIAN</ListProduct>
+      <ListProduct DataShop={DataShop.CELANA}>CELANA</ListProduct>
     </>
   );
 };
