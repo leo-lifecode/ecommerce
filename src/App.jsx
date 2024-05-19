@@ -15,10 +15,10 @@ const App = () => {
           <Route path="/" element={<LayoutHome />}>
             <Route index element={<Home />} />
             <Route path="category" element={<CategoryPage />} />
-            <Route path="category/detail" element={<DetailProduct />} />
+            <Route path="category/detail/:id" element={<DetailProduct />} />
           </Route>
-          <Route path="Signup" element={<Signup />} />
-          <Route path="Signin" element={<Signin />} />
+          <Route path="signup" element={<Signup />} />
+          <Route path="signin" element={<Signin />} />
         </Routes>
       </div>
     </Router>

@@ -12,25 +12,24 @@ const DeskripsisDetailProduct = () => {
       </div>
       <div className="flex">
         <div className="w-[80px] text-gray-500">Merek</div>
-        <div>Aero</div>
+        <div>loremipsum</div>
       </div>
       <div className="flex">
         <div className="w-[80px] text-gray-500">Motif</div>
-        <div>Tulisan</div>
+        <div>Lorem ipsum dolor, sit amet </div>
       </div>
       <div className="py-[14px] pb-[24px] text-[20px] font-semibold">
         Deskripsi product
       </div>
       <div>
         <p className="text-[16px]">
-          Bahan : - Rayon R-47 Relaxed Fit - Lembut - Halus Sejuk dan nyaman
-          saat dipakai SIZE CHART di slide ke 4 ILUSTRASI SIZE saat dikenakan
-          model di slide ke 5 Belanja langsung dari pabrik nya RESELLER dan
-          DROPSHIPER very welcome dapatkan discount spesial dari pabrik langsung
-          *Semua stok dijamin ready *Open order 24 jam *Fast response jam
-          09.00-16.00 Senin s/d Sabtu *Order diatas jam 09.00 akan di proses
-          pada hari berikutnya *Order pada hari Minggu dan hari libur Nasional,
-          pan kami proses pada hari kerja
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo
+          deleniti totam perspiciatis nostrum optio laudantium quasi? Sed porro
+          at cumque perferendis nemo facere commodi aperiam distinctio,
+          provident, eligendi aliquam. Obcaecati, quo quam eius sed fugiat
+          consequatur dolore explicabo animi necessitatibus similique ullam.
+          Maxime incidunt culpa at, ea amet deserunt corrupti perferendis ab
+          hic, est esse quam consectetur, corporis eligendi! Veritatis, ad .
         </p>
       </div>
     </div>

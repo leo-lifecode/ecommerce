@@ -1,49 +1,81 @@
 import LayoutPageProduct from "../../layout/LayoutPageProduct";
-import dummyprojectproduct3 from "../../assets/images/dummydetailproduct3.png";
-import dummyprojectproduct2 from "../../assets/images/dummydetailproduct2.png";
-import dummyprojectproduct from "../../assets/images/dummydetailproduct.png";
 import { useState } from "react";
 import ImageProductDetail from "./components/ImageProductDetail";
 import OptionAddtoCart from "./components/OptionAddtoCart";
 import DeskripsisDetailProduct from "./components/DeskripsisDetailProduct";
-import CardProduct from "../../components/CardProduct";
+import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { setSelectProduct } from "../../redux/Datashofilterp";
+import ListCardDetail from "./components/ListCardDetail";
+import listcarddetailrandom from "../../helper/listcarddetailrandom";
 
 const DetailProduct = () => {
-  const [changeImg, setChangeImg] = useState(dummyprojectproduct3);
+  const { id } = useParams();
+  const idProduct = parseInt(id);
+  const selectProduct = useSelector((state) => state.Data.selectProduct);
+  const data = useSelector((state) => state.Data.DetailProduct);
+  const dispatch = useDispatch();
+  const cardnumber = listcarddetailrandom(data, 4);
+
+  useEffect(() => {
+    const fetchProductDetail = () => {
+      const selectedProduct = data.filter((item) => item.id === idProduct);
+      if (selectedProduct) {
+        dispatch(setSelectProduct(selectedProduct));
+      }
+    };
+    fetchProductDetail();
+  }, [idProduct]);
+
+  const [changeImg, setChangeImg] = useState(false);
   const [checkId, setCheckId] = useState("1");
   const handleChangeImg = (id) => {
     setCheckId(id);
-    if (id === "1") return setChangeImg(dummyprojectproduct3);
-    if (id === "2") return setChangeImg(dummyprojectproduct2);
-    if (id === "3") return setChangeImg(dummyprojectproduct);
+    if (id === "1") return setChangeImg(selectProduct[0]?.img);
+    if (id === "2") return setChangeImg(selectProduct[0]?.img);
+    if (id === "3") return setChangeImg(selectProduct[0]?.img);
   };
 
   return (
-    <LayoutPageProduct>
-      <div className="mt-[20px] md:mt-[28px] xl:mt-[36px] gap-x-4 flex md:gap-x-5 xl:gap-x-10 flex-col md:flex-row md:justify-center lg:justify-normal">
-        <div className="flex h-max flex-shrink-0">
-          <ImageProductDetail
-            changeImg={changeImg}
-            checkId={checkId}
-            handleChangeImg={handleChangeImg}
-            dummyprojectproduct={dummyprojectproduct}
-            dummyprojectproduct2={dummyprojectproduct2}
-            dummyprojectproduct3={dummyprojectproduct3}
-          />
-        </div>
-        <OptionAddtoCart />
-      </div>
-      <DeskripsisDetailProduct />
-      <div className="my-[64px] flex flex-col items-center justify-center gap-y-[55px]">
-        <div className="font-cf text-[48px] uppercase text-center">You might also like</div>
-        <div className="flex items-center justify-center gap-x-5">
-          <CardProduct />
-          <CardProduct />
-          <CardProduct />
-          <CardProduct />
-        </div>
-      </div>
-    </LayoutPageProduct>
+    <>
+      {selectProduct
+        ? selectProduct.map((item) => (
+            <LayoutPageProduct key={item.id}>
+              <div className="mt-[20px] flex flex-col gap-x-4 md:mt-[28px] md:flex-row md:justify-center md:gap-x-5 lg:justify-normal xl:mt-[36px] xl:gap-x-10">
+                <div className="flex h-max flex-shrink-0">
+                  <ImageProductDetail
+                    changeImg={changeImg}
+                    checkId={checkId}
+                    handleChangeImg={handleChangeImg}
+                    dummyprojectproduct={item.img}
+                    dummyprojectproduct2={item.img}
+                    dummyprojectproduct3={item.img}
+                  />
+                </div>
+                <OptionAddtoCart />
+              </div>
+              <DeskripsisDetailProduct />
+              <div className="my-[64px] flex flex-col items-center justify-center gap-y-[55px]">
+                <div className="text-center font-cf text-[48px] uppercase">
+                  You might also like
+                </div>
+                <div className="flex items-center justify-center gap-x-5">
+                  {cardnumber.map((item) => (
+                    <ListCardDetail
+                      key={item.id}
+                      product={item.img}
+                      productName={item.name}
+                      price={item.price}
+                      id={item.id}
+                    />
+                  ))}
+                </div>
+              </div>
+            </LayoutPageProduct>
+          ))
+        : null}
+    </>
   );
 };
 

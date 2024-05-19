@@ -1,42 +1,75 @@
+import { useSelector } from "react-redux";
 import { Icon5star } from "../../../components/Icon";
 import LineBorder from "./LineBorder";
 import SelectColor from "./SelectColor";
 import SelectSize from "./SelectSize";
-
+import { useEffect, useState } from "react";
 const OptionAddtoCart = () => {
+  const data = useSelector((state) => state.Data.selectProduct);
+  const [activeColor, setActiveColor] = useState(1);
+  const [activeSize, setActiveSize] = useState(1);
+
+  useEffect(() => {
+    setActiveColor(1);
+    setActiveSize(1);
+  }, []);
+  const HandleSelectColor = (e, item) => {
+    const id = parseInt(e.target.id);
+    setActiveColor(id);
+    console.log(item);
+  };
+
+  const HandleSelectSize = (e, item) => {
+    const id = parseInt(e.target.id);
+    setActiveSize(id);
+    console.log(item);
+  };
+
   return (
-    <div className="h-max">
-      <div className="w-[267px] md:w-full flex flex-wrap mt-[20px] md:mt-0 line-clamp-1 font-cf text-[24px] uppercase md:text-[18px] xl:text-[40px]">
-        One Life Graphic T shirt
+    <div className="h-max lg:w-full">
+      <div className="mt-[20px] line-clamp-1 flex w-[267px] flex-wrap font-cf text-[24px] uppercase md:mt-0 md:w-full md:text-[18px] xl:text-[40px]">
+        {data[0]?.name}
       </div>
-      <div className="flex gap-x-[16px] mt-[12px] md:mt-0">
+      <div className="mt-[12px] flex gap-x-[16px] md:mt-0">
         <Icon5star />
         <div>5/5</div>
       </div>
-      <div className="font-poppins text-[24px] font-bold xl:text-[32px] mt-[12px] md:mt-0">
-        $260
+      <div className="mt-[12px] font-poppins text-[24px] font-bold md:mt-0 xl:text-[32px]">
+        ${data[0]?.price}
       </div>
-      <div className=" mt-[20px] md:mt-0 flex flex-wrap text-gray-500 md:line-clamp-3 md:w-[340px] md:text-[12px] lg:line-clamp-2 lg:w-full lg:text-[14px] xl:mt-[5px] xl:text-[16px]">
-        This graphic t-shirt which is perfect for any occasion. Crafted from a
-        soft and breathable fabric, it offers superior comfort and style.
+      <div className=" mt-[20px] flex flex-wrap text-gray-500 md:mt-0 md:line-clamp-3 md:w-[340px] md:text-[12px] lg:line-clamp-2 lg:w-full lg:text-[14px] xl:mt-[5px] xl:text-[16px]">
+        {data[0]?.description}
       </div>
       <LineBorder />
       <div className="flex flex-col gap-y-[16px]">
         <div className="font-poppins text-[16px] capitalize">select colors</div>
         <div className="flex gap-x-4">
-          <SelectColor />
-          <SelectColor />
-          <SelectColor />
+          {["gray", "black", "red", "blue", "green"].map((item, index) => (
+            <SelectColor
+              key={index + 4}
+              id={index + 1}
+              HandleSelect={HandleSelectColor}
+              item={item}
+              activeColor={activeColor}
+            />
+          ))}
         </div>
       </div>
       <LineBorder />
       <div className="flex flex-col gap-y-4 font-poppins md:gap-y-2 xl:gap-y-4">
         <div>Choose Size</div>
-        <div className="flex md:flex-wrap gap-2 lg:gap-x-3 md:w-[320px] lg:w-full lg:flex-nowrap">
-          <SelectSize>small</SelectSize>
-          <SelectSize>small</SelectSize>
-          <SelectSize>small</SelectSize>
-          <SelectSize>small</SelectSize>
+        <div className="flex gap-2 md:w-[320px] md:flex-wrap lg:w-full lg:flex-nowrap lg:gap-x-3">
+          {["S", "M", "XL", "XXL"].map((item, index) => (
+            <SelectSize
+              key={index + 2}
+              id={index + 1}
+              HandleSelectSize={HandleSelectSize}
+              item={item}
+              activeSize={activeSize}
+            >
+              {item}
+            </SelectSize>
+          ))}
         </div>
       </div>
       <LineBorder />

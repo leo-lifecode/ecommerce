@@ -1,5 +1,6 @@
 import TitleProduct from "./TitleProduct";
 import CardProduct from "../../../components/CardProduct";
+import { Link } from "react-router-dom";
 
 const ListProduct = ({ DataShop, children }) => {
   return (
@@ -16,7 +17,7 @@ const ListProduct = ({ DataShop, children }) => {
         ))}
       </div>
       <div className="mx-auto my-[50px] w-full max-w-max cursor-pointer rounded-xl bg-gray-200 px-5 py-2 font-poppins font-medium">
-        ...Muat Lebih banyak...
+        <Link to="/category">...Muat Lebih banyak...</Link>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import Search from "../../../assets/svg/search-icon.svg";
 import CartDropDown from "./CartDropDown";
 import { useDispatch } from "react-redux";
 import { toggleicon } from "../../../redux/screenslice";
+import { Link } from "react-router-dom";
 
 const NavbarIcon = () => {
   const [boxProfile, setBoxProfile] = useState(false);
@@ -71,12 +72,17 @@ const NavbarIcon = () => {
         />
         <div
           style={styleClip}
-          className={`${boxProfile ? "z-[9999] opacity-100 shadow-lg" : "z-[-9999] opacity-0"} absolute left-[-115px] mt-[40px] h-[120px] w-[150px] rounded-md bg-zinc-300 p-3 text-black duration-300`}
+          className={`${boxProfile ? "z-[9999] opacity-100 shadow-lg" : "z-[-9999] opacity-0"} absolute left-[-115px] mt-[40px] h-[140px] w-[150px] rounded-md bg-zinc-300 text-black duration-300`}
         >
-          <div className="mt-[20px] flex flex-col">
-            <h3 className="text-md mt-[-1px] font-poppins">{limitedText}</h3>
-            <button className="text-md mt-[12px] rounded-md bg-black p-1 text-left font-poppins text-white">
-              Logout
+          <div className="mt-[20px] flex flex-col font-poppins">
+            <h3 className="text-md mx-1 cursor-pointer rounded-md px-1 py-[2px] font-poppins hover:bg-gray-500">
+              {limitedText ? limitedText : "name:"}
+            </h3>
+            <div className="mx-1 mt-1 cursor-pointer rounded-md px-1 py-[2px] text-base  hover:bg-gray-500">
+              Check Out
+            </div>
+            <button className="text-md mx-1 mt-[12px] cursor-pointer rounded-md bg-black p-1 text-left font-poppins text-white hover:bg-gray-500">
+              {limitedText ? "Logout" : <Link to={"/signup"}>Daftar</Link>}
             </button>
           </div>
         </div>

@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import star5 from "../assets/svg/5-star.svg";
+import star5 from "../../../assets/svg/5-star.svg";
 
-const CardProduct = ({ product, productName, price, id }) => {
+const ListCardDetail = ({ product, productName, price, id }) => {
   return (
     <div className=" bg-primary sm:basis-[40%] md:basis-[25%] lg:flex-[0_0_20%] lg:basis-0">
       <div className="h-[164px] w-[160px] xl:h-[258px] xl:w-[255px]">
-        <Link to={`${id === undefined ? "/category" : `detail/${id}`}`}>
+        <Link to={`/category/detail/${id}`}>
           <img
             src={product}
             alt={productName}
@@ -32,4 +32,4 @@ const CardProduct = ({ product, productName, price, id }) => {
   );
 };
 
-export default CardProduct;
+export default ListCardDetail;

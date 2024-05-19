@@ -62,6 +62,7 @@ const CategoryPage = () => {
           <div className="flex w-full flex-wrap justify-center gap-x-[14px] gap-y-[24px] sm:justify-normal  sm:gap-x-[20px] sm:gap-y-[36px]">
             {datafiltershop?.map((item) => (
               <CardProduct
+                id={item.id}
                 key={item.id}
                 product={item.img}
                 productName={item.name}

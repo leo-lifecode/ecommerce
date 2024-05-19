@@ -83,28 +83,28 @@ const DataShop = {
   ],
   PAKAIAN: [
     {
-      id: 1,
+      id: 10,
       name: "baju bla-bla",
       img: product1,
       price: 12,
       description: "hello world",
     },
     {
-      id: 2,
+      id: 11,
       name: "baju bla-bla",
       img: product2,
       price: 23,
       description: "hello world",
     },
     {
-      id: 3,
+      id: 12,
       name: "baju bla-bla",
       img: product3,
       price: 34,
       description: "hello world",
     },
     {
-      id: 4,
+      id: 13,
       name: "baju bla-bla",
       img: product8,
       price: 45,
@@ -113,21 +113,21 @@ const DataShop = {
   ],
   CELANA: [
     {
-      id: 6,
+      id: 14,
       name: "baju bla-bla",
       img: product5,
       price: 12,
       description: "hello world",
     },
     {
-      id: 7,
+      id: 15,
       name: "baju bla-bla",
       img: product4,
       price: 124,
       description: "hello world",
     },
     {
-      id: 8,
+      id: 16,
       name: "baju bla-bla",
       img: product7,
       price: 14,
@@ -136,21 +136,21 @@ const DataShop = {
   ],
   SARUNG: [
     {
-      id: 9,
+      id: 17,
       name: "baju bla-bla",
       img: "",
       price: 124,
       description: "hello world",
     },
     {
-      id: 10,
+      id: 18,
       name: "baju bla-bla",
       img: "",
       price: 124,
       description: "hello world",
     },
     {
-      id: 11,
+      id: 19,
       name: "baju bla-bla",
       img: "",
       price: 124,

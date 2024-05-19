@@ -85,9 +85,7 @@ const Form = ({ type }) => {
       >
         Password
       </Input>
-      <div className="mb-4 mt-[-8px]">
-        <Checkbox />
-      </div>
+
       <Button>Daftar</Button>
     </form>
   );

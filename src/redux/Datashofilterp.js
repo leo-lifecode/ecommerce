@@ -5,13 +5,15 @@ import { changenamefilter } from "../helper/changenamefilter";
 import sortbyFilter from "../helper/sortbyFilter";
 import filterbySORT from "../helper/filterbySort";
 import filterdatabyprice from "../helper/filterdatabyprice";
-
+import DataDetail from "../data/DataDetail";
 const initialState = {
   name: "CASUAL",
   Data: DataShop.CASUAL,
   sortBy: "Relevansi",
   Min: "",
   Max: "",
+  DetailProduct: DataDetail,
+  selectProduct: null,
 };
 
 const DataShopmap = createSlice({
@@ -50,9 +52,18 @@ const DataShopmap = createSlice({
         state.Max,
       );
     },
+
+    setSelectProduct: (state, action) => {
+      state.selectProduct = action.payload;
+    },
   },
 });
 
-export const { filterbycategory, changenamecategory, sortby, filterbyPrice } =
-  DataShopmap.actions;
+export const {
+  filterbycategory,
+  changenamecategory,
+  sortby,
+  filterbyPrice,
+  setSelectProduct,
+} = DataShopmap.actions;
 export default DataShopmap.reducer;

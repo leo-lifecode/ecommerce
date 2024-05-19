@@ -12,7 +12,7 @@ const ImageBrowseByDress = ({ img, col, name }) => {
         style={{ backgroundImage: `url(${img})` }}
       >
         <Link to="/category">
-          <div className="absolute ps-4 pt-4 z-50 font-poppins text-2xl font-semibold w-full h-full hover:bg-black hover:bg-opacity-10">
+          <div className="hover:text-white absolute ps-4 pt-4 z-50 font-poppins text-2xl font-semibold w-full h-full hover:bg-black hover:bg-opacity-10">
             {name}
           </div>
         </Link>
