@@ -12,7 +12,7 @@ const Navbar = () => {
       >
         <ul className="flex flex-shrink-0 items-center gap-10">
           <Link to={"https://shoply-tnbcommerce.vercel.app/"}>
-            <div className="cursor-pointer font-cf sm:text-2xl md:text-3xl">
+            <div className="text-2xl cursor-pointer font-cf sm:text-2xl md:text-3xl">
               SHOPLY TNB.
             </div>
           </Link>

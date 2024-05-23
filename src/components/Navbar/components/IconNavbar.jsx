@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleicon } from "../../../redux/screenslice";
 import { Link } from "react-router-dom";
 import { styleclip, styleclip2 } from "../../../helper/styleclip";
+import { changenamecategory } from "../../../redux/Datashofilterp";
 
 const NavbarIcon = () => {
   const [boxProfile, setBoxProfile] = useState(false);
@@ -15,7 +16,6 @@ const NavbarIcon = () => {
   const { cart } = useSelector((state) => state.cart);
   const username = localStorage.getItem("username");
   let limitedText = username ? username.slice(0, 10) : "";
-
   useEffect(() => {
     const handleProfile = (e) => {
       const profile = document.querySelector(".profile");
@@ -69,7 +69,12 @@ const NavbarIcon = () => {
           </div>
           <div className="absolute bottom-0 z-[11] mb-[4px] flex w-full text-white">
             <div className=" flex h-[50px] w-[90%] cursor-pointer items-center justify-center self-end rounded-2xl bg-black font-poppins text-xl font-bold duration-200 hover:bg-gray-400 hover:text-black">
-              <Link to="/checkout">Check out</Link>
+              <Link
+                to="/checkout"
+                onClick={() => dispatch(changenamecategory("Checkout"))}
+              >
+                Check out
+              </Link>
             </div>
           </div>
         </div>
@@ -90,7 +95,12 @@ const NavbarIcon = () => {
               {limitedText ? limitedText : "name:"}
             </h3>
             <div className="mx-1 mt-1 cursor-pointer rounded-md px-1 py-[2px] text-base  hover:bg-gray-500">
-              <Link to="/checkout">Check Out</Link>
+              <Link
+                to="/checkout"
+                onClick={() => dispatch(changenamecategory("Checkout"))}
+              >
+                Check Out
+              </Link>
             </div>
             <button className="text-md mx-1 mt-[12px] cursor-pointer rounded-md bg-black p-1 text-left font-poppins text-white hover:bg-gray-500">
               {limitedText ? "Logout" : <Link to={"/signup"}>Daftar</Link>}

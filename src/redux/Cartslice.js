@@ -5,6 +5,7 @@ import filterIncrementProduct from "../helper/filterIncrementProduct";
 
 const initialState = {
   cart: JSON.parse(localStorage.getItem("cart")) || [],
+  total: 0,
 };
 
 const cartslice = createSlice({
@@ -17,13 +18,14 @@ const cartslice = createSlice({
     },
     decrementProduct: (state, action) => {
       state.cart = filterDecrementProduct(state.cart, action.payload);
+      localStorage.setItem("cart", JSON.stringify(state.cart));
     },
     incrementProduct: (state, action) => {
       state.cart = filterIncrementProduct(state.cart, action.payload);
+      localStorage.setItem("cart", JSON.stringify(state.cart));
     },
     deleteCartProduct: (state, action) => {
-      const cart = state.cart;
-      state.cart = cart.filter(
+      state.cart = state.cart.filter(
         (item) =>
           !(
             item.id === action.payload.id &&
@@ -33,12 +35,27 @@ const cartslice = createSlice({
       );
       localStorage.setItem("cart", JSON.stringify(state.cart));
     },
+    setTotal: (state) => {
+      const rawTotal = state.cart.reduce((acc, item) => {
+        return acc + item.price * item.quantity;
+      }, 0);
+      state.total = rawTotal;
+      localStorage.setItem("total", JSON.stringify(state.total));
+    },
+
+    setCart: (state, action) => {
+      state.cart = action.payload;
+      localStorage.setItem("cart", JSON.stringify(state.cart));
+    },
   },
 });
+
 export const {
   addToCart,
   decrementProduct,
   incrementProduct,
   deleteCartProduct,
+  setTotal,
+  setCart,
 } = cartslice.actions;
 export default cartslice.reducer;

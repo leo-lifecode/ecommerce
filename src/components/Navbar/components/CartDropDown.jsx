@@ -9,12 +9,15 @@ const CartDropDown = ({ item }) => {
   const dispatch = useDispatch();
   const handledecrement = (color, size, id) => {
     dispatch(decrementProduct({ color, size, id }));
+    dispatch(setTotal({ color, size, id }));
   };
   const handleIncrement = (color, size, id) => {
     dispatch(incrementProduct({ color, size, id }));
+    dispatch(setTotal({ color, size, id }));
   };
   const handleDelete = (id, color, size) => {
     dispatch(deleteCartProduct({ id, color, size }));
+    dispatch(setTotal({ color, size, id }));
   };
 
   return (
@@ -27,10 +30,12 @@ const CartDropDown = ({ item }) => {
             </div>
             <div className="w-32 flex-auto text-sm">
               <div className="font-bold">{item.name}</div>
-              <div className="text-[12px] text-gray-500 truncate">
+              <div className="truncate text-[12px] text-gray-500">
                 {item.description}
               </div>
-              <div className="text-[12px] text-gray-500">color : {item.color}</div>
+              <div className="text-[12px] text-gray-500">
+                color : {item.color}
+              </div>
               <div className="mt-[4px] flex gap-x-2">
                 <div
                   onClick={() =>

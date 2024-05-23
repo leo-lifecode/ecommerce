@@ -5,7 +5,7 @@ const HeaderCategory = () => {
   const nameCategory = useSelector((state) => state.Data.name);
   return (
     <>
-      <div className="flex gap-1 text-base ">
+      <div className="flex gap-1 text-base">
         <div>Home</div>
         <div>
           <RightArrow />
