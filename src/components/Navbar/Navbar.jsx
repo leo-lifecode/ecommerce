@@ -1,10 +1,7 @@
-import { useState } from "react";
-import ArrowDown from "../../assets/svg/bottom-arrow.svg";
 import NavbarIcon from "../Navbar/components/IconNavbar";
 import NavbarInput from "../Navbar/components/InputNavbar";
 import { Link } from "react-router-dom";
 import NavbarSearchMobile from "./components/NavbarSearchMobile";
-import { styleClip } from "../../utils/styleclip";
 
 const Navbar = () => {
   return (

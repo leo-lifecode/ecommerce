@@ -1,28 +1,43 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Icon5star } from "../../../components/Icon";
 import LineBorder from "./LineBorder";
 import SelectColor from "./SelectColor";
 import SelectSize from "./SelectSize";
 import { useEffect, useState } from "react";
+import { addToCart } from "../../../redux/Cartslice";
+
 const OptionAddtoCart = () => {
   const data = useSelector((state) => state.Data.selectProduct);
   const [activeColor, setActiveColor] = useState(1);
   const [activeSize, setActiveSize] = useState(1);
-
+  const [color, setColor] = useState("gray");
+  const [size, setSize] = useState("S");
+  const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart.cart);
   useEffect(() => {
     setActiveColor(1);
     setActiveSize(1);
   }, []);
+
   const HandleSelectColor = (e, item) => {
     const id = parseInt(e.target.id);
     setActiveColor(id);
-    console.log(item);
+    setColor(item);
   };
 
   const HandleSelectSize = (e, item) => {
     const id = parseInt(e.target.id);
     setActiveSize(id);
-    console.log(item);
+    setSize(item);
+  };
+
+  const HandleAddToCart = () => {
+    dispatch(
+      addToCart({ ...data[0], color: color, size: size, quantity: quantity }),
+    );
+    setQuantity(1);
+  
   };
 
   return (
@@ -76,18 +91,29 @@ const OptionAddtoCart = () => {
       <div className="flex gap-x-5">
         <div className="flex w-[170px] justify-between rounded-[62px] bg-[#F0F0F0] py-[12px] font-poppins xl:py-[20px]">
           <div className=" ps-[14px] font-poppins text-[24px] font-bold">
-            <div className="cursor-pointer rounded-full px-2 hover:bg-slate-300">
+            <div
+              onClick={() =>
+                setQuantity(quantity > 1 ? quantity - 1 : quantity)
+              }
+              className="cursor-pointer rounded-full px-2 hover:bg-slate-300"
+            >
               -
             </div>
           </div>
-          <div className="px-[14px]  font-poppins text-[24px]">10</div>
+          <div className="px-[14px]  font-poppins text-[24px]">{quantity}</div>
           <div className=" pe-[14px] font-poppins text-[24px] font-bold">
-            <div className="cursor-pointer rounded-full px-2 hover:bg-slate-300">
+            <div
+              onClick={() => setQuantity(quantity + 1)}
+              className="cursor-pointer rounded-full px-2 hover:bg-slate-300"
+            >
               +
             </div>
           </div>
         </div>
-        <div className="flex w-full cursor-pointer items-center justify-center rounded-[62px] bg-black py-[12px] text-center text-[16px] font-semibold text-white duration-150 hover:border hover:border-black hover:bg-white hover:text-black xl:py-[15px]">
+        <div
+          onClick={HandleAddToCart}
+          className="flex w-full cursor-pointer items-center justify-center rounded-[62px] bg-black py-[12px] text-center text-[16px] font-semibold text-white duration-150 hover:border hover:border-black hover:bg-white hover:text-black xl:py-[15px]"
+        >
           Add to Cart
         </div>
       </div>

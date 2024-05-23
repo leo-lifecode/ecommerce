@@ -1,11 +1,10 @@
 import LayoutPageProduct from "../../layout/LayoutPageProduct";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ImageProductDetail from "./components/ImageProductDetail";
 import OptionAddtoCart from "./components/OptionAddtoCart";
 import DeskripsisDetailProduct from "./components/DeskripsisDetailProduct";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
 import { setSelectProduct } from "../../redux/Datashofilterp";
 import ListCardDetail from "./components/ListCardDetail";
 import listcarddetailrandom from "../../helper/listcarddetailrandom";
@@ -27,6 +26,8 @@ const DetailProduct = () => {
     };
     fetchProductDetail();
   }, [idProduct]);
+
+  // console.log(selectProduct);
 
   const [changeImg, setChangeImg] = useState(false);
   const [checkId, setCheckId] = useState("1");

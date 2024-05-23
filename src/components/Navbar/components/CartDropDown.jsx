@@ -1,32 +1,61 @@
-const CartDropDown = () => {
+import { useDispatch } from "react-redux";
+import {
+  decrementProduct,
+  deleteCartProduct,
+  incrementProduct,
+} from "../../../redux/Cartslice";
+
+const CartDropDown = ({ item }) => {
+  const dispatch = useDispatch();
+  const handledecrement = (color, size, id) => {
+    dispatch(decrementProduct({ color, size, id }));
+  };
+  const handleIncrement = (color, size, id) => {
+    dispatch(incrementProduct({ color, size, id }));
+  };
+  const handleDelete = (id, color, size) => {
+    dispatch(deleteCartProduct({ id, color, size }));
+  };
+
   return (
     <>
-      <div className="absolute z-10 w-full rounded-b border-t-0">
+      <div className="relative z-10 w-full rounded-b border-t-0">
         <div className="w-full shadow-lg">
           <div className="flex cursor-pointer border-b border-gray-100 bg-white p-2 hover:bg-gray-100">
             <div className="w-12 p-2">
-              <img
-                src="https://dummyimage.com/50x50/bababa/0011ff&amp;text=50x50"
-                alt="img product"
-              />
+              <img src={item.img} alt="img product" />
             </div>
             <div className="w-32 flex-auto text-sm">
-              <div className="font-bold">Product 1</div>
-              <div className="truncate text-[12px] text-gray-500">
-                Product 1 description
+              <div className="font-bold">{item.name}</div>
+              <div className="text-[12px] text-gray-500 truncate">
+                {item.description}
               </div>
+              <div className="text-[12px] text-gray-500">color : {item.color}</div>
               <div className="mt-[4px] flex gap-x-2">
-                <div className="bg-gray-700 px-1 font-bold text-white duration-150 hover:bg-gray-900">
+                <div
+                  onClick={() =>
+                    handledecrement(item.color, item.size, item.id)
+                  }
+                  className="bg-gray-700 px-1 font-bold text-white duration-150 hover:bg-gray-900"
+                >
                   -
                 </div>
-                <div className="text-gray-500">2</div>
-                <div className="bg-gray-700 px-1 font-bold text-white duration-150 hover:bg-gray-900">
+                <div className="text-gray-500">{item.quantity}</div>
+                <div
+                  onClick={() =>
+                    handleIncrement(item.color, item.size, item.id)
+                  }
+                  className="bg-gray-700 px-1 font-bold text-white duration-150 hover:bg-gray-900"
+                >
                   +
                 </div>
               </div>
             </div>
             <div className="w-18 flex flex-col items-end font-medium ">
-              <div className="mb-6 h-4 w-4 cursor-pointer rounded-full text-red-700 hover:bg-red-200">
+              <div
+                onClick={() => handleDelete(item.id, item.color, item.size)}
+                className="mb-6 h-4 w-4 cursor-pointer rounded-full text-red-700 hover:bg-red-200"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="100%"
@@ -45,7 +74,7 @@ const CartDropDown = () => {
                   <line x1="14" y1="11" x2="14" y2="17"></line>
                 </svg>
               </div>
-              <div className="mt-[4px] font-bold">$12.22</div>
+              <div className="mt-[4px] font-bold">{item.price}</div>
             </div>
           </div>
         </div>

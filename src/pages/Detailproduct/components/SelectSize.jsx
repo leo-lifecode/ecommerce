@@ -1,5 +1,4 @@
 const SelectSize = ({ children, id, HandleSelectSize, item, activeSize }) => {
-  console.log(id === activeSize);
   return (
     <div
       id={id}

@@ -1,9 +1,7 @@
-import { Outlet } from "react-router-dom";
 import { ScrollNavigateToTop } from "../helper/NavigateToTop";
 import HeaderCategory from "../pages/CategoryPage/components/HeaderCategory";
-import { Children } from "react";
 
-const LayoutPageProduct = ({children}) => {
+const LayoutPageProduct = ({ children }) => {
   return (
     <>
       <ScrollNavigateToTop />

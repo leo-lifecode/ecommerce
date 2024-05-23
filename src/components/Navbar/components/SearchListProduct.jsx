@@ -1,7 +1,7 @@
 import DataShop from "../../../data/DataShop";
 
 const SearchListProduct = () => {
-  const imgShop = DataShop.pakaian;
+  const imgShop = DataShop.PAKAIAN;
   return (
     <div className="flex cursor-pointer gap-2 rounded-lg p-2 shadow-md">
       <div className="flex">

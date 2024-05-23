@@ -6,6 +6,9 @@ import LayoutHome from "./layout/LayoutHome";
 import CategoryPage from "./pages/CategoryPage/CategoryPage";
 import DetailProduct from "./pages/Detailproduct/DetailProduct";
 import { ScrollNavigateToTop } from "./helper/NavigateToTop";
+import Page404 from "./pages/PageNotFound.jsx/Page404";
+import Checkout from "./pages/Checkout/Checkout";
+
 const App = () => {
   return (
     <Router>
@@ -16,9 +19,11 @@ const App = () => {
             <Route index element={<Home />} />
             <Route path="category" element={<CategoryPage />} />
             <Route path="category/detail/:id" element={<DetailProduct />} />
+            <Route path="checkout" element={<Checkout />} />
           </Route>
           <Route path="signup" element={<Signup />} />
           <Route path="signin" element={<Signin />} />
+          <Route path="*" element={<Page404 />} />
         </Routes>
       </div>
     </Router>
