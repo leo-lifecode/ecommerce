@@ -139,11 +139,11 @@ const CategoryPage = () => {
               </div>
             </div>
           </div>
-          <div className="flex w-full flex-wrap justify-center gap-x-[14px] gap-y-[24px] sm:justify-normal  sm:gap-x-[20px] sm:gap-y-[36px]">
+          <div className="lg:h-[1296px] flex w-full flex-wrap justify-center gap-x-[14px] gap-y-[24px] sm:justify-normal  sm:gap-x-[20px] sm:gap-y-[36px]">
             {datafiltershop?.map((item) => (
               <CardProduct
                 id={item.id}
-                key={item.id}
+                key={item.id && item.img}
                 product={item.img}
                 productName={item.name}
                 price={item.price}

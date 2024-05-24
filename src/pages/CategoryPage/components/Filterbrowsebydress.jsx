@@ -3,7 +3,7 @@ import {
   filterbycategory,
   changenamecategory,
 } from "../../../redux/Datashofilterp";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { IconChecklist } from "../../../components/Icon";
 
 const Filterbrowsebydress = ({ name, activecheck }) => {

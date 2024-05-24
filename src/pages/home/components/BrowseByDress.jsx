@@ -1,4 +1,3 @@
-import React from "react";
 import DataBrowseBy from "../../../data/DataBrowsebyDress";
 import ImageBrowseByDress from "./ImageBrowseByDress";
 const BrowseByDress = () => {

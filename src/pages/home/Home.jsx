@@ -1,4 +1,3 @@
-import React from "react";
 import Homepage from "./components/Homepage";
 import CategoryShop from "./components/CategoryShop";
 import BrowseByDress from "./components/BrowseByDress";

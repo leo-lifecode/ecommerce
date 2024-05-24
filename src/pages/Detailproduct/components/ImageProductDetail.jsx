@@ -23,7 +23,7 @@ const ImageProductDetail = ({
       <div className="row-span-1 md:col-start-1 md:row-start-1">
         <CardDetailProduct
           id="1"
-          img={dummyprojectproduct3}
+          img={dummyprojectproduct}
           handleChangeImg={handleChangeImg}
           checkId={checkId}
         />
@@ -39,7 +39,7 @@ const ImageProductDetail = ({
       <div className="row-span-1 md:row-start-3  ">
         <CardDetailProduct
           id="3"
-          img={dummyprojectproduct}
+          img={dummyprojectproduct3}
           handleChangeImg={handleChangeImg}
           checkId={checkId}
         />

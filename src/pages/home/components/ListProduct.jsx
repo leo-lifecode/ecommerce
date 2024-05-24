@@ -7,7 +7,7 @@ const ListProduct = ({ DataShop, children }) => {
     <div className="mt-[72px] flex w-full flex-col bg-primary px-[24px] text-center sm:text-left md:px-[100px] lg:items-center ">
       <TitleProduct>{children}</TitleProduct>
       <div className="no-scrollbar mt-[55px] flex max-w-max snap-mandatory gap-x-4 overflow-x-scroll lg:flex-wrap lg:justify-center lg:gap-5">
-        {DataShop.map((item) => (
+        {DataShop.slice(0, 4).map((item) => (
           <CardProduct
             key={item.id}
             product={item.img}

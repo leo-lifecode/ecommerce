@@ -27,22 +27,20 @@ const DetailProduct = () => {
     fetchProductDetail();
   }, [idProduct]);
 
-  // console.log(selectProduct);
-
   const [changeImg, setChangeImg] = useState(false);
   const [checkId, setCheckId] = useState("1");
   const handleChangeImg = (id) => {
     setCheckId(id);
     if (id === "1") return setChangeImg(selectProduct[0]?.img);
-    if (id === "2") return setChangeImg(selectProduct[0]?.img);
-    if (id === "3") return setChangeImg(selectProduct[0]?.img);
+    if (id === "2") return setChangeImg(selectProduct[0]?.img2);
+    if (id === "3") return setChangeImg(selectProduct[0]?.img3);
   };
 
   return (
     <>
       {selectProduct
         ? selectProduct.map((item) => (
-            <LayoutPageProduct key={item.id}>
+            <LayoutPageProduct>
               <div className="mt-[20px] flex flex-col gap-x-4 md:mt-[28px] md:flex-row md:justify-center md:gap-x-5 lg:justify-normal xl:mt-[36px] xl:gap-x-10">
                 <div className="flex h-max flex-shrink-0">
                   <ImageProductDetail
@@ -50,21 +48,28 @@ const DetailProduct = () => {
                     checkId={checkId}
                     handleChangeImg={handleChangeImg}
                     dummyprojectproduct={item.img}
-                    dummyprojectproduct2={item.img}
-                    dummyprojectproduct3={item.img}
+                    dummyprojectproduct2={item.img2}
+                    dummyprojectproduct3={item.img3}
                   />
                 </div>
                 <OptionAddtoCart />
               </div>
-              <DeskripsisDetailProduct />
+              {selectProduct
+                ? selectProduct.map((item) => (
+                    <DeskripsisDetailProduct
+                      key={item.id && item.price}
+                      item={item}
+                    />
+                  ))
+                : null}
               <div className="my-[64px] flex flex-col items-center justify-center gap-y-[55px]">
                 <div className="text-center font-cf text-[48px] uppercase">
                   You might also like
                 </div>
-                <div className="flex items-center justify-center gap-x-5">
+                <div className="flex items-center justify-center gap-x-5 overflow-x-scroll no-scroll">
                   {cardnumber.map((item) => (
                     <ListCardDetail
-                      key={item.id}
+                      key={item.size}
                       product={item.img}
                       productName={item.name}
                       price={item.price}

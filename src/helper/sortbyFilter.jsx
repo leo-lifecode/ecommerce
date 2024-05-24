@@ -1,5 +1,4 @@
 function sortbyFilter(operator) {
-  // console.log(state.sortBy);
   switch (operator) {
     case "Relevansi":
       return "Relevansi";
