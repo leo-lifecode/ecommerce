@@ -4,7 +4,7 @@ import {
   deleteCartProduct,
   incrementProduct,
 } from "../../../redux/Cartslice";
-
+import formatrupiah from "../../../helper/formatrupiah";
 const CartDropDown = ({ item }) => {
   const dispatch = useDispatch();
   const handledecrement = (color, size, id) => {
@@ -22,17 +22,15 @@ const CartDropDown = ({ item }) => {
 
   return (
     <>
-      <div className="relative z-10 w-full rounded-b border-t-0">
-        <div className="w-full shadow-lg">
-          <div className="flex cursor-pointer border-b border-gray-100 bg-white p-2 hover:bg-gray-100">
-            <div className="w-12 p-2">
-              <img src={item.img} alt="img product" />
+      <div className="relative z-10 w-full rounded-b border-t-0 h-full">
+        <div className="w-full shadow-lg h-full">
+          <div className="flex cursor-pointer border-b border-gray-100  p-2 hover:bg-gray-100 h-full">
+            <div className="flex h-12 w-12 flex-shrink-0 p-2">
+              <img src={item.img} className="h-12 w-12" alt="img product" />
             </div>
-            <div className="w-32 flex-auto text-sm">
-              <div className="font-bold">{item.name}</div>
-              <div className="truncate text-[12px] text-gray-500">
-                {item.description}
-              </div>
+            <div className="w-32 flex-auto text-sm ">
+              <div className="font-semibold">{item.name}</div>
+
               <div className="text-[12px] text-gray-500">
                 color : {item.color}
               </div>
@@ -56,7 +54,7 @@ const CartDropDown = ({ item }) => {
                 </div>
               </div>
             </div>
-            <div className="w-18 flex flex-col items-end font-medium ">
+            <div className="w-18 flex flex-col items-end font-medium h-full justify-between">
               <div
                 onClick={() => handleDelete(item.id, item.color, item.size)}
                 className="mb-6 h-4 w-4 cursor-pointer rounded-full text-red-700 hover:bg-red-200"
@@ -79,7 +77,7 @@ const CartDropDown = ({ item }) => {
                   <line x1="14" y1="11" x2="14" y2="17"></line>
                 </svg>
               </div>
-              <div className="mt-[4px] font-bold">{item.price}</div>
+              <div className="mt-[4px] font-bold text-[10px]">Rp.{item.price}</div>
             </div>
           </div>
         </div>

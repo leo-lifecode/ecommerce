@@ -54,7 +54,7 @@ const NavbarIcon = () => {
         </div>
         <div
           style={{ clipPath: styleclip2().clipPath }}
-          className={`${boxCart ? " z-[9999] opacity-100" : "z-[-9999] opacity-0"} absolute left-[-140px] mt-[20px] h-[450px] w-[200px] bg-zinc-200 p-3  text-black shadow-xl duration-300 sm:left-[-180px] sm:w-[250px] xl:left-[-215px] xl:w-[300px]`}
+          className={`${boxCart ? " z-[9999] opacity-100" : "z-[-9999] opacity-0"} absolute left-[-160px] mt-[20px] h-[450px] w-[230px] bg-zinc-200 p-3  text-black shadow-xl duration-300 sm:left-[-180px] sm:w-[250px] xl:left-[-215px] xl:w-[300px]`}
         >
           <div className="scrollcart z-[9999999] mt-[20px] flex h-full flex-col gap-y-2 overflow-y-scroll pb-[70px] font-poppins">
             {cart.length > 0 ? (
