@@ -7,7 +7,7 @@ const LayoutPageProduct = ({ children }) => {
       <ScrollNavigateToTop />
       <div
         id="category"
-        className="m-auto w-full px-[16px] font-poppins sm:px-[40px] lg:px-[80px] xl:px-[100px]"
+        className="m-auto w-full px-[13px] font-poppins sm:px-[40px] lg:px-[80px] xl:px-[100px]"
       >
         <HeaderCategory />
         {children}

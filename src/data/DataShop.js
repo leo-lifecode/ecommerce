@@ -67,19 +67,71 @@ import riahn2 from "../assets/images/riahn2.jpg";
 const DataShop = {
   CASUAL: [
     {
-      id: 1,
-      name: "SINGLET PRIA DEWASA / Singlet Pria Kaos",
-      img: kaossinglet,
-      img2: kaossinglet2,
-      img3: kaossinglet3,
-      price: 8999,
-      description: `KAOS DALAM PRIA
-      MERK SEDO/AC-MILAN
-      BAHAN KATUN, ADEMM DAN MENYERAP KERINGAT
-      BAHAN BAGUS, MURAH BERKUALITAS`,
-      motif: "Polos",
+      id: 17,
+      name: "setelan anak kemeja polos",
+      img: trendykecil,
+      img2: trendykecil2,
+      img3: trendykecil3,
+      price: 31200,
+      description: `SETELAN KAMEJA ANAK LAKI-LAKI USIA 1-4 TAHUN
+      UKURAN S-M-L-XL/80-90-100-110`,
+      motif: "polos",
       bahan: "Katun",
-      merk: "Sedo",
+      merk: "-",
+    },
+    {
+      id: 19,
+      name: "Setelan RiAhn Baju Anak",
+      img: riahn,
+      img2: riahn2,
+      img3: "",
+      price: 58750,
+      description: "-",
+      motif: "polos",
+      bahan: "Katun",
+      merk: "Babycinamon",
+    },
+    {
+      id: 6,
+      name: "Sweat Vest Atasan Korean",
+      img: outfitremaja,
+      img2: outfitremaja2,
+      img3: outfitremaja3,
+      price: 44900,
+      description:
+        "Celana dalam anak motif kartun bahan lembut, nyaman dipakai",
+      motif: "Polos",
+      bahan: " Fleece , Wollycrepe",
+      merk: "Vanilla",
+    },
+    {
+      id: 3,
+      name: "KAOS ANAK LAKI-LAKI DISTRO GODLY KIDS",
+      img: kaosanakgambar,
+      img2: kaosanakgambar2,
+      img3: kaosanakgambar3,
+      price: 43950,
+      description: `Real Pict!!! 100% gambar hasil jepretan sendiri
+      Detail Produk :
+      ☑️Cotton Combed Reaktif 30s Premium - Jenis kain katun yang paling favorit karena tidak melar, dapat menyerap keringat, nyaman dipakai.
+      Sablon:
+      ☑️Plastisol - Jenis sablon karet yang tahan lama, sablon tidak pecah, permukaan kaos tetap lembut, aman dicuci berkali-kali dan dikeringkan dengan mesin pengering
+      ☑️Jahitan Standar Distro Original`,
+      motif: "Gambar",
+      bahan: "Katun",
+      merk: "GODLY",
+    },
+    {
+      id: 16,
+      name: "Kemeja BaseBall Lengan Pendek",
+      img: kemejabaseball,
+      img2: kemejabaseball2,
+      img3: kemejabaseball3,
+      price: 165000,
+      description: "-",
+      motif: "polos",
+      bahan: "Katun",
+      merk: "Blackid",
     },
     {
       id: 2,
@@ -111,23 +163,7 @@ const DataShop = {
       bahan: "Hornet",
       merk: "-",
     },
-    {
-      id: 3,
-      name: "KAOS ANAK LAKI-LAKI DISTRO GODLY KIDS",
-      img: kaosanakgambar,
-      img2: kaosanakgambar2,
-      img3: kaosanakgambar3,
-      price: 43950,
-      description: `Real Pict!!! 100% gambar hasil jepretan sendiri
-      Detail Produk :
-      ☑️Cotton Combed Reaktif 30s Premium - Jenis kain katun yang paling favorit karena tidak melar, dapat menyerap keringat, nyaman dipakai.
-      Sablon:
-      ☑️Plastisol - Jenis sablon karet yang tahan lama, sablon tidak pecah, permukaan kaos tetap lembut, aman dicuci berkali-kali dan dikeringkan dengan mesin pengering
-      ☑️Jahitan Standar Distro Original`,
-      motif: "Gambar",
-      bahan: "Katun",
-      merk: "GODLY",
-    },
+
     {
       id: 5,
       name: "Celana Dalam Anak Laki Laki",
@@ -141,74 +177,38 @@ const DataShop = {
       bahan: "Katun",
       merk: "-",
     },
+
     {
-      id: 6,
-      name: "Sweat Vest Atasan Korean",
-      img: outfitremaja,
-      img2: outfitremaja2,
-      img3: outfitremaja3,
-      price: 44900,
-      description:
-        "Celana dalam anak motif kartun bahan lembut, nyaman dipakai",
+      id: 1,
+      name: "SINGLET PRIA DEWASA / Singlet Pria Kaos",
+      img: kaossinglet,
+      img2: kaossinglet2,
+      img3: kaossinglet3,
+      price: 8999,
+      description: `KAOS DALAM PRIA
+      MERK SEDO/AC-MILAN
+      BAHAN KATUN, ADEMM DAN MENYERAP KERINGAT
+      BAHAN BAGUS, MURAH BERKUALITAS`,
       motif: "Polos",
-      bahan: " Fleece , Wollycrepe",
-      merk: "Vanilla",
-    },
-    {
-      id: 16,
-      name: "Kemeja BaseBall Lengan Pendek",
-      img: kemejabaseball,
-      img2: kemejabaseball2,
-      img3: kemejabaseball3,
-      price: 165000,
-      description: "-",
-      motif: "polos",
       bahan: "Katun",
-      merk: "Blackid",
-    },
-    {
-      id: 17,
-      name: "setelan anak kemeja polos",
-      img: trendykecil,
-      img2: trendykecil2,
-      img3: trendykecil3,
-      price: 31200,
-      description: `SETELAN KAMEJA ANAK LAKI-LAKI USIA 1-4 TAHUN
-      UKURAN S-M-L-XL/80-90-100-110`,
-      motif: "polos",
-      bahan: "Katun",
-      merk: "-",
-    },
-    {
-      id: 19,
-      name: "Setelan RiAhn Baju Anak",
-      img: riahn,
-      img2: riahn2,
-      img3: "",
-      price: 58750,
-      description: "-",
-      motif: "polos",
-      bahan: "Katun",
-      merk: "Babycinamon",
+      merk: "Sedo",
     },
   ],
   PAKAIAN: [
     {
-      id: 10,
-      name: "Wanita One Set Salur",
-      img: setelansalur,
-      img2: setelansalur2,
-      img3: setelansalur3,
-      price: 52000,
-      description: `Setelan Wanita Motif Salur Garis Stripe 
-      Kaos Salur yang trendy dan celana polos yang simpel sehingga tetap terlihat cantik berpergian maupun beraktivitas sehari-hari.
-      Ukuran Kaos :
-      Panjang 70 cm
-      LD 95 - 104 cm melar maksimal`,
-      motif: "Polos, Garis-garis",
-      bahan: "Voxy",
-      merk: "RDIC",
+      id: 14,
+      name: "Gamis Aqilla Bahan Sliky",
+      img: gamiszein,
+      img2: gamiszein2,
+      img3: "",
+      price: 194400,
+      description:
+        "Bahan Dior slik premium grade A Bahan  tidak panas, jatuh ,tidak menyusut, tidak mudah kusut dan ringan",
+      motif: "Etnik",
+      bahan: "Dior Slik",
+      merk: "Zein",
     },
+    
     {
       id: 11,
       name: "Tunik Jumbo Crinkle",
@@ -263,17 +263,20 @@ const DataShop = {
       merk: "Zaskia",
     },
     {
-      id: 14,
-      name: "Gamis Aqilla Bahan Sliky",
-      img: gamiszein,
-      img2: gamiszein2,
-      img3: "",
-      price: 194400,
-      description:
-        "Bahan Dior slik premium grade A Bahan  tidak panas, jatuh ,tidak menyusut, tidak mudah kusut dan ringan",
-      motif: "Etnik",
-      bahan: "Dior Slik",
-      merk: "Zein",
+      id: 10,
+      name: "Wanita One Set Salur",
+      img: setelansalur,
+      img2: setelansalur2,
+      img3: setelansalur3,
+      price: 52000,
+      description: `Setelan Wanita Motif Salur Garis Stripe 
+      Kaos Salur yang trendy dan celana polos yang simpel sehingga tetap terlihat cantik berpergian maupun beraktivitas sehari-hari.
+      Ukuran Kaos :
+      Panjang 70 cm
+      LD 95 - 104 cm melar maksimal`,
+      motif: "Polos, Garis-garis",
+      bahan: "Voxy",
+      merk: "RDIC",
     },
     {
       id: 15,

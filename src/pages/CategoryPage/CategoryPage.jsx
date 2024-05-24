@@ -95,8 +95,8 @@ const CategoryPage = () => {
           </div>
         )}
         <div className="max-w-[925px] w-full">
-          <div className="flex justify-between w-full">
-            <div className="mb-[16px] font-poppins text-3xl font-semibold">
+          <div className="flex justify-between w-full items-center mb-[16px]">
+            <div className="font-poppins text-3xl font-semibold">
               {nameCategory}
             </div>
             <div className="icon flex items-center justify-center filter sm:hidden">
