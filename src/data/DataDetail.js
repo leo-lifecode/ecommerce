@@ -58,9 +58,9 @@ import kemejabaseball3 from "../assets/images/kemejabaseball3.jpg";
 import trendykecil from "../assets/images/trendykecil.jpg";
 import trendykecil2 from "../assets/images/trendykecil2.jpg";
 import trendykecil3 from "../assets/images/trendykecil3.jpg";
-import queetin from "../assets/images/queetin.jpg";
-import queetin2 from "../assets/images/queetin2.jpg";
-import queetin3 from "../assets/images/queetin3.jpg";
+import queetin from "../assets/images/queentin.jpg";
+import queetin2 from "../assets/images/queentin2.jpg";
+import queetin3 from "../assets/images/queentin3.jpg";
 import riahn from "../assets/images/riahn.jpg";
 import riahn2 from "../assets/images/riahn2.jpg";
 
@@ -297,7 +297,7 @@ const DataShop = [
     merk: "Babycinamon",
   },
   {
-    id: 14,
+    id: 30,
     name: "Celana chino pria panjang",
     img: celanachino,
     img2: celanachino2,

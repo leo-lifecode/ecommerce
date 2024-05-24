@@ -58,9 +58,9 @@ import kemejabaseball3 from "../assets/images/kemejabaseball3.jpg";
 import trendykecil from "../assets/images/trendykecil.jpg";
 import trendykecil2 from "../assets/images/trendykecil2.jpg";
 import trendykecil3 from "../assets/images/trendykecil3.jpg";
-import queetin from "../assets/images/queetin.jpg";
-import queetin2 from "../assets/images/queetin2.jpg";
-import queetin3 from "../assets/images/queetin3.jpg";
+import queetin from "../assets/images/queentin.jpg";
+import queetin2 from "../assets/images/queentin2.jpg";
+import queetin3 from "../assets/images/queentin3.jpg";
 import riahn from "../assets/images/riahn.jpg";
 import riahn2 from "../assets/images/riahn2.jpg";
 
@@ -153,6 +153,43 @@ const DataShop = {
       motif: "Polos",
       bahan: " Fleece , Wollycrepe",
       merk: "Vanilla",
+    },
+    {
+      id: 16,
+      name: "Kemeja BaseBall Lengan Pendek",
+      img: kemejabaseball,
+      img2: kemejabaseball2,
+      img3: kemejabaseball3,
+      price: 165000,
+      description: "-",
+      motif: "polos",
+      bahan: "Katun",
+      merk: "Blackid",
+    },
+    {
+      id: 17,
+      name: "setelan anak kemeja polos",
+      img: trendykecil,
+      img2: trendykecil2,
+      img3: trendykecil3,
+      price: 31200,
+      description: `SETELAN KAMEJA ANAK LAKI-LAKI USIA 1-4 TAHUN
+      UKURAN S-M-L-XL/80-90-100-110`,
+      motif: "polos",
+      bahan: "Katun",
+      merk: "-",
+    },
+    {
+      id: 19,
+      name: "Setelan RiAhn Baju Anak",
+      img: riahn,
+      img2: riahn2,
+      img3: "",
+      price: 58750,
+      description: "-",
+      motif: "polos",
+      bahan: "Katun",
+      merk: "Babycinamon",
     },
   ],
   PAKAIAN: [
@@ -251,31 +288,6 @@ const DataShop = {
       merk: "Broodies",
     },
     {
-      id: 16,
-      name: "Kemeja BaseBall Lengan Pendek",
-      img: kemejabaseball,
-      img2: kemejabaseball2,
-      img3: kemejabaseball3,
-      price: 165000,
-      description: "-",
-      motif: "polos",
-      bahan: "Katun",
-      merk: "Blackid",
-    },
-    {
-      id: 17,
-      name: "setelan anak kemeja polos",
-      img: trendykecil,
-      img2: trendykecil2,
-      img3: trendykecil3,
-      price: 31200,
-      description: `SETELAN KAMEJA ANAK LAKI-LAKI USIA 1-4 TAHUN
-      UKURAN S-M-L-XL/80-90-100-110`,
-      motif: "polos",
-      bahan: "Katun",
-      merk: "-",
-    },
-    {
       id: 18,
       name: "One-Set Rib Knit",
       img: queetin,
@@ -289,22 +301,10 @@ const DataShop = {
       bahan: "Katun, Rajut",
       merk: "Queetin",
     },
-    {
-      id: 19,
-      name: "Setelan RiAhn Baju Anak",
-      img: riahn,
-      img2: riahn2,
-      img3: "",
-      price: 58750,
-      description: "-",
-      motif: "polos",
-      bahan: "Katun",
-      merk: "Babycinamon",
-    },
   ],
   CELANA: [
     {
-      id: 14,
+      id: 30,
       name: "Celana chino pria panjang",
       img: celanachino,
       img2: celanachino2,
