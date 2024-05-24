@@ -60,7 +60,7 @@ function Checkout() {
                 ? new Intl.NumberFormat("id-ID", {
                     style: "currency",
                     currency: "IDR",
-                  }).format(parseFloat(total) - 10000)
+                  }).format(parseFloat(total) + 10000)
                 : "Rp0"}
             </div>
           </div>
