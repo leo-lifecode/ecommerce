@@ -22,7 +22,7 @@ function ModalCheckout({ setShowModal }) {
   return (
     <div className="fixed right-0 top-0 z-[9999999] h-screen w-full bg-black bg-opacity-30">
       <div className="flex h-screen items-center justify-center ">
-        <div className="relative mb-[50px] w-[450px] space-y-6 rounded-xl bg-white px-6 py-5 font-poppins sm:mb-0">
+        <div className="relative mb-[50px] w-4/5 sm:w-[450px] space-y-6 rounded-xl bg-white px-6 py-5 font-poppins sm:mb-0">
           <div
             onClick={() => setShowModal(false)}
             className="absolute -right-5 -top-5 flex cursor-pointer justify-end rounded-full bg-gray-200 px-3 py-1 text-4xl hover:bg-gray-500"
