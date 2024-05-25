@@ -25,7 +25,7 @@ function CardCheckoutProduct({ item }) {
   return (
     <div className="flex  w-full">
       <div className="me-[2px] sm:me-[14px] flex w-[90px] h-[90px] sm:h-[124px] sm:w-[124px] flex-shrink-0 lg:me-[16px]">
-        <img src={item.img} className="w-[90px] h-[90px] sm:w-full" />
+        <img src={item.img} className="w-[90px] h-[90px] sm:h-[124px] sm:w-[124px]" />
       </div>
       <div className="flex w-full justify-between lg:gap-x-16">
         <div className="flex flex-col justify-between gap-y-4 font-poppins text-[14px]">

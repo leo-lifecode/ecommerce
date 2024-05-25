@@ -4,7 +4,6 @@ import {
   deleteCartProduct,
   incrementProduct,
 } from "../../../redux/Cartslice";
-import formatrupiah from "../../../helper/formatrupiah";
 const CartDropDown = ({ item }) => {
   const dispatch = useDispatch();
   const handledecrement = (color, size, id) => {
@@ -22,7 +21,7 @@ const CartDropDown = ({ item }) => {
 
   return (
     <>
-      <div className="relative z-10 w-full rounded-b border-t-0 h-full">
+      <div className="relative z-10 w-full rounded-b border-t-0 h-max">
         <div className="w-full shadow-lg h-full">
           <div className="flex cursor-pointer border-b border-gray-100  p-2 hover:bg-gray-100 h-full">
             <div className="flex h-12 w-12 flex-shrink-0 p-2">

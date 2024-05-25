@@ -5,7 +5,8 @@ import SelectColor from "./SelectColor";
 import SelectSize from "./SelectSize";
 import { useEffect, useState } from "react";
 import { addToCart } from "../../../redux/Cartslice";
-
+import formatrupiah from "../../../helper/formatrupiah";
+formatrupiah;
 const OptionAddtoCart = () => {
   const data = useSelector((state) => state.Data.selectProduct);
   const [activeColor, setActiveColor] = useState(1);
@@ -37,7 +38,6 @@ const OptionAddtoCart = () => {
       addToCart({ ...data[0], color: color, size: size, quantity: quantity }),
     );
     setQuantity(1);
-  
   };
 
   return (
@@ -50,9 +50,9 @@ const OptionAddtoCart = () => {
         <div>5/5</div>
       </div>
       <div className="mt-[12px] font-poppins text-[24px] font-bold md:mt-0 xl:text-[32px]">
-        ${data[0]?.price}
+        {formatrupiah(data[0]?.price)}
       </div>
-      <div className="mt-[20px] text-gray-500 md:mt-0 line-clamp-2 md:line-clamp-3 md:w-[340px] md:text-[12px] lg:line-clamp-2 lg:w-full lg:text-[14px] xl:mt-[5px] xl:text-[16px]">
+      <div className="mt-[20px] line-clamp-2 text-gray-500 md:mt-0 md:line-clamp-3 md:w-[340px] md:text-[12px] lg:line-clamp-2 lg:w-full lg:text-[14px] xl:mt-[5px] xl:text-[16px]">
         {data[0]?.description}
       </div>
       <LineBorder />
