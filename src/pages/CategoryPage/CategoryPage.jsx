@@ -1,11 +1,12 @@
 import FilterCategory from "./components/FilterCategory";
-import CardProduct from "../../components/CardProduct";
+// import CardProduct from "../../components/CardProduct";
 import { useDispatch, useSelector } from "react-redux";
 import LayoutPageProduct from "../../layout/LayoutPageProduct";
 import { BottomArrow, Filtermobile } from "../../components/Icon";
 import { useState } from "react";
 import { filterbyPrice, sortby } from "../../redux/Datashofilterp";
 import Filterbrowsebydress from "./components/Filterbrowsebydress";
+import PaginatedItems from "./components/PaginatedItems";
 
 const CategoryPage = () => {
   const datafiltershop = useSelector((state) => state.Data.Data);
@@ -94,8 +95,8 @@ const CategoryPage = () => {
             </div>
           </div>
         )}
-        <div className="max-w-[925px] w-full">
-          <div className="flex justify-between w-full items-center mb-[16px]">
+        <div className="w-full max-w-[925px]">
+          <div className="mb-[16px] flex w-full items-center justify-between">
             <div className="font-poppins text-3xl font-semibold">
               {nameCategory}
             </div>
@@ -139,8 +140,8 @@ const CategoryPage = () => {
               </div>
             </div>
           </div>
-          <div className="lg:h-[1296px] flex w-full flex-wrap justify-center gap-x-[14px] gap-y-[24px] sm:justify-normal  sm:gap-x-[20px] sm:gap-y-[36px]">
-            {datafiltershop?.map((item) => (
+          <div className="flex w-full flex-col lg:h-[1296px] ">
+            {/* {datafiltershop?.map((item) => (
               <CardProduct
                 id={item.id}
                 key={item.id && item.img}
@@ -148,10 +149,12 @@ const CategoryPage = () => {
                 productName={item.name}
                 price={item.price}
               />
-            ))}
-          </div>
-          <div className="mt-[20px] flex w-full items-center justify-center">
-            <div>pagination</div>
+            ))} */}
+            <PaginatedItems
+              itemsPerPage={9}
+              lengthitems={datafiltershop.length}
+              items={datafiltershop}
+            />
           </div>
         </div>
       </div>

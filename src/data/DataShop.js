@@ -67,6 +67,20 @@ import riahn2 from "../assets/images/riahn2.jpg";
 const DataShop = {
   CASUAL: [
     {
+      id: 18,
+      name: "One-Set Rib Knit",
+      img: queetin,
+      img2: queetin2,
+      img3: queetin3,
+      price: 169000,
+      description: `Queentin One-Set casual dibuat dengan bahan kaos rib knit premium dari benang cotton yg halus dan lembut
+      Karakter Bahan Kaos Knit yang tidak terlalu tebal dan handfeel adem, cocok dengan yg suka bahan kaos yang tidak tebal, tidak kaku, lembut dan elastis, semua pembeli selalu puas dengan kualitas bahan Kaos Knit Premium ini
+      Queentin, Excellent is Perfect!`,
+      motif: "polos",
+      bahan: "Katun, Rajut",
+      merk: "Queetin",
+    },
+    {
       id: 17,
       name: "setelan anak kemeja polos",
       img: trendykecil,
@@ -78,6 +92,19 @@ const DataShop = {
       motif: "polos",
       bahan: "Katun",
       merk: "-",
+    },
+    {
+      id: 14,
+      name: "Gamis Aqilla Bahan Sliky",
+      img: gamiszein,
+      img2: gamiszein2,
+      img3: "",
+      price: 194400,
+      description:
+        "Bahan Dior slik premium grade A Bahan  tidak panas, jatuh ,tidak menyusut, tidak mudah kusut dan ringan",
+      motif: "Etnik",
+      bahan: "Dior Slik",
+      merk: "Zein",
     },
     {
       id: 19,
@@ -208,7 +235,7 @@ const DataShop = {
       bahan: "Dior Slik",
       merk: "Zein",
     },
-    
+
     {
       id: 11,
       name: "Tunik Jumbo Crinkle",
